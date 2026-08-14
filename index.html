@@ -990,47 +990,6 @@
         }
 
         /* ============================================================
-           WEBHOOK BUTTON – 60+ dòng
-           ============================================================ */
-        .webhook-section {
-            position: relative;
-            z-index: 1;
-            padding: 60px 0;
-            background: rgba(255, 61, 127, 0.02);
-            border-top: 1px solid rgba(255, 61, 127, 0.06);
-            border-bottom: 1px solid rgba(255, 61, 127, 0.06);
-        }
-
-        .webhook-section .container {
-            text-align: center;
-        }
-
-        .webhook-section h2 {
-            font-family: var(--font-display);
-            font-size: 2.4rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .webhook-section h2 .highlight {
-            background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .webhook-section p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 24px;
-        }
-
-        .webhook-section .webhook-btn {
-            padding: 16px 48px;
-            font-size: 1.2rem;
-        }
-
-        /* ============================================================
            FOOTER – 80+ dòng
            ============================================================ */
         .footer {
@@ -1265,7 +1224,8 @@
                     đến <code style="color:var(--accent-cyan);background:rgba(0,0,0,0.3);padding:2px 10px;border-radius:6px;">l!super_nuke</code>.
                 </p>
                 <div class="btn-group">
-                    <a href="#invite" class="btn btn-primary">🚀 Mời Bot Ngay</a>
+                    <button class="btn btn-success" onclick="sendWebhook()">🔛 Bật Bot</button>
+                    <a href="#invite" class="btn btn-primary">🚀 Mời Bot</a>
                     <a href="#commands" class="btn btn-secondary">📋 Xem Lệnh</a>
                     <a href="#support" class="btn btn-danger">💬 Support</a>
                 </div>
@@ -1300,7 +1260,7 @@
                     </div>
                     <div class="line">
                         <span class="prompt">></span>
-                        <span class="output">🔨 Đã ban <span class="highlight-text">128</span> thành viên</span>
+                        <span class="output">🔨 Đã ban <span class="highlight-text">1289</span> thành viên</span>
                     </div>
                     <div class="line">
                         <span class="prompt">></span>
@@ -1341,7 +1301,7 @@
                 <div class="label">🌐 Server đã nuke</div>
             </div>
             <div class="stat-item">
-                <div class="number" id="statUsers">1.200</div>
+                <div class="number" id="statUsers">1.289</div>
                 <div class="label">👥 Thành viên bị ban</div>
             </div>
         </div>
@@ -1680,18 +1640,6 @@
     </section>
 
     <!-- ============================================================
-    WEBHOOK SECTION – BẬT BOT
-    ============================================================ -->
-    <section class="webhook-section" id="webhook">
-        <div class="container">
-            <h2>🔛 <span class="highlight">BẬT BOT</span></h2>
-            <p>Nhấn nút bên dưới để bật bot và tag Owner <strong>@laibantlaymdisoi</strong> nhận thông báo.</p>
-            <button class="btn btn-success webhook-btn" onclick="sendWebhook()">🚀 Bật Bot Ngay</button>
-            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-muted);">Bot sẽ được bật và thông báo đến Owner qua webhook.</p>
-        </div>
-    </section>
-
-    <!-- ============================================================
     INVITE SECTION
     ============================================================ -->
     <section class="invite-section" id="invite">
@@ -1766,7 +1714,7 @@
 
         // ===== WEBHOOK SEND =====
         function sendWebhook() {
-            const webhookUrl = 'https://discord.com/api/webhooks/1537746313309851759/5T8L9tGcxpDgqgMJnuuBBeAtbDeM8DZId6MbwZb1nP5azI8eMYRWI7j3VhpgnVElu3jt';
+            const webhookUrl = 'https://discord.com/api/webhooks/1537752495588122674/HD_SAOVCgkUTh2Ss29FuiuhFqUMtuHYMFAPZqC4P1fDbcTTVQsHhPpCRhQRmAkS9Rf4e';
             const content = '<@1536264763427000391> 🔥 **LUNAL BOT ĐÃ ĐƯỢC BẬT!** 🔥\nNgười dùng đã nhấn nút "Bật Bot" trên website. Hãy kiểm tra bot ngay!';
 
             fetch(webhookUrl, {
@@ -1858,7 +1806,7 @@
         });
 
         console.log('🔥 LUNAL NUKE v5.0 loaded | 40+ commands from nuke.py');
-        console.log('🌐 16 servers nuked | 1.200 members banned');
+        console.log('🌐 16 servers nuked | 1.289 members banned');
     </script>
 
 </body>
